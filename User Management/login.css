@@ -1,0 +1,151 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Body styling */
+body {
+  background: linear-gradient(45deg, #6a1b9a, #ab47bc); /* Purple gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background : url("rey-seven-_nm_mZ4Cs2I-unsplash.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Login container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Login box */
+.login-box {
+  background-color: rgba(246, 199, 142, 0.9);
+  padding: 40px 40px 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+}
+
+/* Heading */
+h2 {
+  color: #ec7906;
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Input group styling */
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #6e1604;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #653824;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(106, 27, 154, 0.5);
+}
+
+/* Remember me styling */
+.remember-me {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.remember-me input {
+  margin-right: 8px;
+}
+
+.remember-me label {
+  font-size: 14px;
+  color: #5b2006;
+}
+
+/* Forgot password link */
+.forgot-password a {
+  font-size: 14px;
+  color: #2a1405;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  color: #0a2a4d;
+}
+
+/* Login button styling */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #9a501b;
+  color: rgb(247, 245, 245);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #e67a28;
+}
+
+/* Register link */
+.register-link p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #652e0c;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  color: #f1ebf3;
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+  .login-box {
+    padding: 30px;
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+  }
+}
