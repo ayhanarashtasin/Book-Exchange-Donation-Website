@@ -1,0 +1,166 @@
+:root {
+    --primary-color: #3A2618;
+    --secondary-color: #D2B48C;
+    --accent-color: #8B4513;
+    --text-color: #2C1A0F;
+    --background-color: #F5E6D3;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: 'Libre Baskerville', serif;
+    background: 
+        linear-gradient(rgba(245, 230, 211, 0.9), rgba(245, 230, 211, 0.9)),
+        url('https://www.transparenttextures.com/patterns/old-map.png');
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+nav p {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+#add-book-section {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+#add-book-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+input, select, textarea {
+    padding: 0.8rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Libre Baskerville', serif;
+    transition: all 0.3s ease;
+    background-color: var(--background-color);
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.2);
+}
+
+button {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-family: 'Libre Baskerville', serif;
+}
+
+button:hover {
+    background-color: #6B3410;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#add-book-section {
+    animation: fadeIn 1s ease-out;
+}
+
+input, select, textarea, button {
+    animation: fadeIn 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+input:nth-child(1) { animation-delay: 0.1s; }
+input:nth-child(2) { animation-delay: 0.2s; }
+select { animation-delay: 0.3s; }
+input:nth-child(4) { animation-delay: 0.4s; }
+textarea { animation-delay: 0.5s; }
+button { animation-delay: 0.6s; }
+
+/* Responsive design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    #add-book-section {
+        padding: 1.5rem;
+    }
+}
